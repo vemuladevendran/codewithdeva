@@ -1,0 +1,21 @@
+.carousel-images {
+    height: 10rem;
+}
+
+header {
+    height: 6rem;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    background-color: white;
+
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: white;
+
+}

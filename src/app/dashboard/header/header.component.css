@@ -1,0 +1,5 @@
+nav {
+    overflow-x: auto;
+    border-bottom: 1px solid grey;
+    scrollbar-width: none;
+}
