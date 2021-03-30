@@ -6,7 +6,9 @@
         <!-- news -->
         <div class="col-12">
             <!-- news cards -->
-            <app-news-card></app-news-card>
+            <app-news-card [topic]="n.categorieDetail.name" [description]="n.description" [images]="n.photo" 
+            [createdTime]="n.categorieDetail.created_at"  [viewCount]="n.viewCount" [shareCount]="n.shareCount"
+            *ngFor="let n of data; index as i;"></app-news-card>
         </div>
     </div>
 </div>

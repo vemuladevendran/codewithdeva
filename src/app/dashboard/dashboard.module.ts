@@ -7,10 +7,11 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { TrendingComponent } from './trending/trending.component';
 import { NewsCardComponent } from './news-card/news-card.component';
+import { NewspageComponent } from './newspage/newspage.component';
 
 
 @NgModule({
-  declarations: [DashboardComponent, HeaderComponent, FooterComponent, TrendingComponent, NewsCardComponent],
+  declarations: [DashboardComponent, HeaderComponent, FooterComponent, TrendingComponent, NewsCardComponent, NewspageComponent],
   imports: [
     CommonModule,
     DashboardRoutingModule

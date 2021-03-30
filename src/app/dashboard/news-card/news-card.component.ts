@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-news-card',
@@ -7,14 +7,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NewsCardComponent implements OnInit {
 
-  topice = ['science'];
+  @Input() topic = '';
+  @Input() description = '';
+  @Input() createdTime = '';
+  @Input() images = '';
+  @Input() viewCount = '';
+  @Input() shareCount = '';
 
-  description = [' urfu euubvh uhebhuv urfueuu bvhu hebhuv urfu euubvh uhebhuv urfueuu bvhu hebhuvurfu euubvh uhebhuv urfueuu bvhu hebhuv urfu euubvh uhebhuv urfueuu bvhu hebhuv']
 
-  creator = ['devendran']
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  getDescription(htmlStr: string): string {
+    const parser = new DOMParser();
+    const htmlDoc = parser.parseFromString(htmlStr, 'text/html');
+    return htmlDoc.body.innerText;
   }
 
 }
