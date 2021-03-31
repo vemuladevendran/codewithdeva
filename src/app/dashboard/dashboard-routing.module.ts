@@ -14,7 +14,7 @@ const routes: Routes = [
         component: TrendingComponent,
       },
       {
-        path: 'newspage',
+        path: ':id/newspage',
         component: NewspageComponent,
       }
     ],

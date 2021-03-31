@@ -1,0 +1,50 @@
+<div class="container-fluid px-0">
+    <div class="row"  *ngFor="let n of data; index as i;">
+        <!-- news image -->
+        <div class="col-12">
+            <img [src]="'https://tamilpokkisham-bucket.nyc3.digitaloceanspaces.com/news/' + n.photo" class="w-100">
+        </div>
+        <!-- news topic-->
+        <div class="col-12 news-topic mt-2 pb-3">
+            <!-- news sub topic -->
+            <div class="col-12">
+                <span class="card-sub-topic">{{n.categorieDetail.name}}</span>
+                <span class="d-flex float-end">
+                    <div class="view-count">
+                        <i class="bi bi-eye"></i>
+                        <span> {{n.viewCount}}</span>
+                    </div>
+                    <div class="share-count ms-2">
+                        <i class="bi bi-share"></i>
+                        <span> {{n.shareCount}}</span>
+                    </div>
+                </span>
+            </div>
+            <!-- news heading -->
+            <div class="col-12">
+                <h1 class="fw-bold text-center">{{n.title}}</h1>
+            </div>
+            <div class="col-12 mt-3 d-flex justify-content-between">
+                <div class="d-flex">
+                    <img src="assets/image-1.jpeg" class="news-logo-img">
+                    <div>
+                        <p class="ms-3 m-0">deva</p>
+                        <span class="Posted-date ms-3" style="margin: 4px 10px 0 0;">{{n.categorieDetail.created_at | date}}</span>
+                    </div>
+                </div>
+                <div>
+                    <i class="bi bi-bar-chart-fill me-1" [ngClass]="{'text-danger': selectedFontSize === textSizeOptions.SMALL}" (click)="normalfont(textSizeOptions.SMALL)"></i>
+                    <i class="bi bi-bar-chart-fill me-1" [ngClass]="{'text-danger': selectedFontSize === textSizeOptions.MEDIUM}" (click)="normalfont(textSizeOptions.MEDIUM)" style="font-size: 25px;"></i>
+                    <i class="bi bi-bar-chart-fill" [ngClass]="{'text-danger': selectedFontSize === textSizeOptions.LARGE}" (click)="normalfont(textSizeOptions.LARGE)" style="font-size: 35px;"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- news content -->
+        <div class="col-12">
+            <p [ngStyle]="{fontSize: selectedFontSize}">
+                {{getDescription(n.description)}}
+            </p>
+        </div>
+    </div>
+</div>
