@@ -1,18 +1,16 @@
-/* body {
+/* body.dark, body.dark header, body.dark footer, body.dark .news-title, body.dark .news-card {
     background-color: black !important;
     color: white !important;
 } */
 
-
-
 /* news card */
+
 .card-sub-topic {
     font-size: 12px;
     background-color: rgba(128, 128, 128, 0.445);
     border-radius: 5px;
     padding: 5px;
 }
-
 
 .view-count i, .share-count i {
     font-size: 12px;
@@ -22,8 +20,6 @@
     font-size: 12px;
 }
 
-
-
 /* news page */
 
 .news-logo-img {
@@ -31,4 +27,3 @@
     height: 4rem;
     border-radius: 50%;
 }
-

@@ -1,18 +1,17 @@
-<div class="container-fluid px-0">
+<div class="container-fluid container-md px-0">
     <div class="row mb-3">
         <div class="col-12 news-title">
-            <h1 class="fw-bold">Trending News</h1>
+            <h1 class="fw-bold">{{category}}</h1>
         </div>
         <!-- news -->
-        <div class="col-12">
+        <div class="col-12 d-md-flex flex-md-wrap">
             <!-- news cards -->
-            <app-news-card [topic]="n.categorieDetail.name" [description]="n.description" [images]="n.photo" 
-            [createdTime]="n.categorieDetail.created_at"  [viewCount]="n.viewCount" [shareCount]="n.shareCount"
-            [routerLink]="['../', n._id, 'newspage']"
-            *ngFor="let n of data; index as i;"></app-news-card>
+            <app-news-card [topic]="n.categorieDetail.name" [description]="n.description" [images]="n.photo"
+                [createdTime]="n.categorieDetail.created_at" [viewCount]="n.viewCount" [shareCount]="n.shareCount"
+                [routerLink]="[n._id, 'newspage']" *ngFor="let n of data; index as i;" class="col-md-4"></app-news-card>
         </div>
-        <div class="col-12 text-center" (click)="pageIncrease()">
-            Load More
-        </div>
+           
     </div>
+    <button type="button" class="btn load-btn col-12 text-center" (click)="pageIncrease()">load
+        more</button>
 </div>

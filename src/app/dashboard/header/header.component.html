@@ -16,18 +16,9 @@
 
         <!-- nav bar -->
         <nav class="col-12 p-0 mt-3">
-            <div class="d-flex">
-                <a class="nav-link" [routerLink]="['trending']">
-                    Trending
-                </a>
-                <a class="nav-link" [routerLink]="['updates']">
-                    Updates
-                </a>
-                <a class="nav-link" [routerLink]="['topics']">
-                    Topics
-                </a>
-                <a class="nav-link" [routerLink]="['videos']">
-                    Videos
+            <div class="webkit-box">
+                <a class="nav-link text-white" [routerLink]="['/dashboard']" *ngFor="let n of data; index as i;" [queryParams]="{categorie: n.name}">
+                    <span>{{n.name}}</span>
                 </a>
             </div>
         </nav>

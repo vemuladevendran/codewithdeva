@@ -1,26 +1,27 @@
- <!-- news cards -->
-            <div class="news-card d-flex shadow-lg bg-white rounded mb-3 px-1 py-2">
-                <div class="col-6">
-                    <span class="card-sub-topic">{{topic}}</span>
-                    <p class="description mb-0">
-                        {{getDescription(description)}}
-                    </p>
-                    <span class="Posted-by fw-bold">Posted At:</span><br>
-                   <div class="d-flex">
-                    <span class="Posted-by" style="margin: 4px 10px 0 0;">{{createdTime | date}}</span>
-                    <span class="d-flex float-end">
-                       <div class="view-count">
-                        <i class="bi bi-eye"></i>
-                        <span> {{viewCount}}</span>
-                       </div>
-                       <div class="share-count ms-2">
-                        <i class="bi bi-share"></i>
-                        <span> {{shareCount}}</span>
-                       </div>
-                    </span>
-                   </div>
+<!-- news cards -->
+<div class="news-card d-flex shadow-lg rounded mb-3 px-1 py-2">
+    <div class="col-6">
+        <span class="card-sub-topic">{{topic}}</span>
+        <p class="description mb-0">
+            {{getDescription(description)}}
+        </p>
+        <span class="Posted-by fw-bold">Posted At:</span><br>
+        <div class="d-flex">
+            <span class="Posted-by" style="margin: 4px 10px 0 0;">{{createdTime | date}}</span>
+            <span class="d-flex float-end">
+                <div class="view-count">
+                    <i class="bi bi-eye"></i>
+                    <span> {{viewCount}}</span>
                 </div>
-                <div class="col-6 text-center">
-                    <img [src]="'https://tamilpokkisham-bucket.nyc3.digitaloceanspaces.com/news/' + images"  class="news-card-images">
+                <div class="share-count ms-2">
+                    <i class="bi bi-share"></i>
+                    <span> {{shareCount}}</span>
                 </div>
-            </div>
+            </span>
+        </div>
+    </div>
+    <div class="col-6 text-center">
+        <img [src]="'https://tamilpokkisham-bucket.nyc3.digitaloceanspaces.com/news/' + images"
+            class="news-card-images">
+    </div>
+</div>
