@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+// import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-settings',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SettingsComponent implements OnInit {
 
-  constructor() { }
+
+
+  constructor(
+    // formcontrol: FormControl,
+  ) { }
 
   ngOnInit(): void {
+    this.checkToggel();
+  }
+
+  checkToggel(): void {
+   const x = document.getElementById('flexSwitchCheckDefault');
+   console.log(x);
   }
 
 }

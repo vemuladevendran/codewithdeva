@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col-12">
             <div class="d-flex justify-content-between down-nav text-center">
-                <div class="down-nav-icons">
+                <div class="down-nav-icons" [routerLink]="['../' + 'dahboard']" [routerLinkActive]="['active']">
                     <i class="bi bi-house-door"></i>
                     <p>home</p>
                 </div>
@@ -14,7 +14,7 @@
                 <i class="bi bi-bookmark"></i>
                 <p>Saved</p>
                </div>
-               <div class="down-nav-icons">
+               <div class="down-nav-icons" [routerLink]="['settings']" [routerLinkActive]="['active']">
                 <i class="bi bi-gear"></i>
                 <p>Settings</p>
                </div>

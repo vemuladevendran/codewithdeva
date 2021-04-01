@@ -1,3 +1,7 @@
+.active i {
+    color: red;
+}
+
 .down-nav-icons i {
     font-size: 25px;
 }
@@ -10,3 +14,4 @@
 .down-nav {
     border-top: 1px solid grey;
 }
+
