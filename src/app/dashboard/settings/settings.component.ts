@@ -1,3 +1,4 @@
+import { NONE_TYPE } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 // import { FormControl } from '@angular/forms';
 
@@ -9,18 +10,13 @@ import { Component, OnInit } from '@angular/core';
 export class SettingsComponent implements OnInit {
 
 
-
   constructor(
     // formcontrol: FormControl,
   ) { }
 
   ngOnInit(): void {
-    this.checkToggel();
   }
 
-  checkToggel(): void {
-   const x = document.getElementById('flexSwitchCheckDefault');
-   console.log(x);
-  }
+
 
 }
