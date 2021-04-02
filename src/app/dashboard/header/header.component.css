@@ -8,3 +8,8 @@ nav {
 .webkit-box {
     display: -webkit-box;
 }
+
+.sidenav-container {
+    height: 100vh;
+    background-color: whitesmoke;
+}

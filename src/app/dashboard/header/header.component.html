@@ -1,4 +1,4 @@
-<div class="container-fluid px-0">
+<div class="container-fluid px-0" [ngStyle]="{display: header}">
     <div class="row">
         <div class="col-12">
             <div class="d-flex mt-1">
@@ -9,7 +9,7 @@
                 </div>
                 <!-- menu icon -->
                 <div class="col-6 d-sm-none">
-                    <i class="bi bi-list float-end h4"></i>
+                    <i class="bi bi-list float-end h4" (click)="openSideNav()"></i>
                 </div>
             </div>
         </div>
@@ -22,5 +22,23 @@
                 </a>
             </div>
         </nav>
+    </div>
+</div>
+
+<!-- side nav -->
+
+<div class="container-fluid sidenav-container m-0 w-75" [ngStyle]="{display: sidenav}">
+    <div class="row">
+        <div class="col-12">
+            <div class="float-end mt-2">
+                <i class="bi bi-x-circle-fill h1" (click)="closeSideNav()"></i>
+            </div>
+            <div class="mt-5">
+                <p [routerLink]="['/dashboard']" [queryParams]="{categorie:l}" (click)="closeSideNav()"
+                *ngFor="let l of navlinks; index as i">
+                    {{navtitle[i]}}
+                </p>
+            </div>
+        </div>
     </div>
 </div>

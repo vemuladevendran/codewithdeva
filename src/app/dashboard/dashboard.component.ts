@@ -15,17 +15,5 @@ export class DashboardComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    // this.loadNews();
   }
-
-  // private async loadNews(): Promise<void> {
-  //   try {
-  //     const data = await this.http.get<any[]>('https://tamilpokkishamapp.com:3000/api/v2//web/get-top-categories').toPromise();
-      
-  //     console.log(data);
-  //   } catch (error) {
-  //     console.error(error);
-
-  //   }
-  // }
 }

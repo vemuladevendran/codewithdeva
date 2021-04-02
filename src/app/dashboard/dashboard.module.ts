@@ -9,14 +9,25 @@ import { TrendingComponent } from './trending/trending.component';
 import { NewsCardComponent } from './news-card/news-card.component';
 import { NewspageComponent } from './newspage/newspage.component';
 import { SettingsComponent } from './settings/settings.component';
-import { SidenavComponent } from './sidenav/sidenav.component';
+import { SavednewsComponent } from './savednews/savednews.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
-  declarations: [DashboardComponent, HeaderComponent, FooterComponent, TrendingComponent, NewsCardComponent, NewspageComponent, SettingsComponent, SidenavComponent],
+  declarations: [
+    DashboardComponent,
+    HeaderComponent,
+    FooterComponent,
+    TrendingComponent,
+    NewsCardComponent,
+    NewspageComponent,
+    SettingsComponent,
+    SavednewsComponent,
+  ],
   imports: [
     CommonModule,
-    DashboardRoutingModule
+    DashboardRoutingModule,
+    ReactiveFormsModule,
   ]
 })
 export class DashboardModule { }

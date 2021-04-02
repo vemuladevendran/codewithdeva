@@ -2,6 +2,7 @@ import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './dashboard.component';
 import { NewspageComponent } from './newspage/newspage.component';
+import { SavednewsComponent } from './savednews/savednews.component';
 import { SettingsComponent } from './settings/settings.component';
 import { TrendingComponent } from './trending/trending.component';
 
@@ -19,9 +20,14 @@ const routes: Routes = [
         component: NewspageComponent,
       },
       {
-        path: ':settings',
+        path: 'settings',
         component: SettingsComponent,
-      }
+      },
+      {
+        path: 'savednews',
+        component: SavednewsComponent,
+      },
+
     ],
   }
 ];

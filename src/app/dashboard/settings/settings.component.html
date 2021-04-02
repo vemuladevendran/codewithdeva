@@ -1,4 +1,4 @@
-<div class="container-fluid px-0">
+<div class="container-fluid px-0 setting-container">
     <div class="row">
         <div class="col-12 d-flex logo-container">
             <img src="assets/logo.png" class="news-logo-img me-3">
@@ -13,7 +13,8 @@
                 <span>
                     <div class="form-check form-switch">
                         <label class="form-check-label" for="flexSwitchCheckDefault">Dark Mode</label>
-                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" checked>
+                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault"
+                            [formControl]="darkModeCtrl">
                     </div>
                 </span>
             </div>
