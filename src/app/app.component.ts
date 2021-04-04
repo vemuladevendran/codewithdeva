@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { DarkmodeService } from './darkmode.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'CodeWithDeva';
+
+
+  constructor(
+    private darkModeService: DarkmodeService,
+  ) { }
+
+  ngOnInit(): void {
+    this.darkModeService.renderDarkMode(!!+(localStorage.getItem('darkMode') as any));
+  }
 }

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { promise } from 'selenium-webdriver';
+import { DarkmodeService } from '../darkmode.service';
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',

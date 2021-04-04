@@ -34,8 +34,8 @@
                 <i class="bi bi-x-circle-fill h1" (click)="closeSideNav()"></i>
             </div>
             <div class="mt-5">
-                <p [routerLink]="['/dashboard']" [queryParams]="{categorie:l}" (click)="closeSideNav()"
-                *ngFor="let l of navlinks; index as i">
+                <p [routerLink]="['/dashboard']" [queryParams]="{categorie:t.name}" (click)="closeSideNav()"
+                *ngFor="let t of data; index as i">
                     {{navtitle[i]}}
                 </p>
             </div>

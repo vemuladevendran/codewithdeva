@@ -8,7 +8,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
   data: any[] = [];
-  navlinks = ['உலக அரசியல', 'அறிவியல்', 'விண்வெளி', 'தமிழ் வரலாறு', 'ராணுவம்', 'தமிழ் செய்திகள்', 'இதர படைப்புகள்', 'தமிழ் பொக்கிஷம்', 'English News'];
   navtitle = ['World Politics', 'Science', 'Space', 'Tamil History', 'Army', 'Tamil News', 'Other Works', 'Tamil Treasure', 'English News'];
   header = 'block';
   sidenav = 'none';
