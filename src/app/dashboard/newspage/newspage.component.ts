@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { promise } from 'selenium-webdriver';
+import { SavedNewsService } from 'src/app/saved-news.service';
 
 enum TextSize {
   SMALL = '16px',
@@ -20,12 +21,12 @@ export class NewspageComponent implements OnInit {
   selectedFontSize = TextSize.SMALL;
   data: any[] = [];
   newsData: any;
-
+  newsId: any;
   constructor(
     private router: Router,
     private route: ActivatedRoute,
     private http: HttpClient,
-
+    private savedNewsService: SavedNewsService,
 
 
   ) { }
@@ -60,7 +61,10 @@ export class NewspageComponent implements OnInit {
     }
   }
 
-
+  saveNews(): any {
+    this.newsId = this.route.snapshot.paramMap.get('id');
+    this.savedNewsService.getUserId(this.newsId);
+  }
 
 
 

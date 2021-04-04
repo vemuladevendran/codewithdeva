@@ -8,9 +8,9 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class TrendingComponent implements OnInit {
   data: any[] = [];
+  pageData: any[] = [];
   pagecount: any = 0;
   category = '';
-
   constructor(
     private router: Router,
     private http: HttpClient,
@@ -18,7 +18,7 @@ export class TrendingComponent implements OnInit {
   ) {
     this.route.queryParamMap.subscribe((paramMap) => {
       if (!paramMap.get('categorie')) {
-        this.router.navigate(['./'], { queryParams: { categorie: 'தமிழ் வரலாறு'}})
+        this.router.navigate(['./'], { queryParams: { categorie: 'தமிழ் வரலாறு' } })
         return;
       }
 
@@ -33,13 +33,16 @@ export class TrendingComponent implements OnInit {
   }
 
   pageIncrease(): void {
-    if (this.pagecount === 0) {
+
+    if (this.pageData.length === 0) {
+      window.alert('no more pages available');
+    } else {
       this.pagecount += 1;
       this.loadNews();
-    } else {
-      window.alert('no more pages available');
-
     }
+
+
+
   }
 
 
@@ -53,7 +56,8 @@ export class TrendingComponent implements OnInit {
       };
       // fromString: "page=0&category=தமிழ் வரலாறு"}
       const result = await this.http.get<any>('https://tamilpokkishamapp.com:3000/api/v2/web/topics-by-category', opts).toPromise();
-      this.data.push(...result.data);
+      this.pageData = result.data;
+      this.data.push(...this.pageData);
     } catch (error) {
       console.error(error);
 
