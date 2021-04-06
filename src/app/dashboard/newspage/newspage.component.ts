@@ -10,7 +10,6 @@ enum TextSize {
   LARGE = '23px',
 }
 
-
 @Component({
   selector: 'app-newspage',
   templateUrl: './newspage.component.html',
@@ -22,6 +21,7 @@ export class NewspageComponent implements OnInit {
   data: any[] = [];
   newsData: any;
   newsId: any;
+  displayLoader = false;
   constructor(
     private router: Router,
     private route: ActivatedRoute,
@@ -50,6 +50,7 @@ export class NewspageComponent implements OnInit {
   // news
 
   private async loadNews(): Promise<void> {
+    this.displayLoader = true;
     try {
       const id = this.route.snapshot.paramMap.get('id');
       const result = await this.http.get<any>(`https://tamilpokkishamapp.com:3000/api/v2/web/topic/${id}`).toPromise();
@@ -58,6 +59,9 @@ export class NewspageComponent implements OnInit {
     } catch (error) {
       console.error(error);
 
+    }
+    finally{
+      this.displayLoader = false;
     }
   }
 

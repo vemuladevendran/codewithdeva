@@ -1,4 +1,5 @@
 <div class="container-fluid container-md px-0">
+    <app-loader *ngIf="displayLoader"></app-loader>
     <div class="row" *ngFor="let n of data; index as i;">
         <!-- news image -->
         <div class="col-12">

@@ -11,6 +11,7 @@ import { NewspageComponent } from './newspage/newspage.component';
 import { SettingsComponent } from './settings/settings.component';
 import { SavednewsComponent } from './savednews/savednews.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { LoaderComponent } from './loader/loader.component';
 
 
 @NgModule({
@@ -23,6 +24,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     NewspageComponent,
     SettingsComponent,
     SavednewsComponent,
+    LoaderComponent,
   ],
   imports: [
     CommonModule,

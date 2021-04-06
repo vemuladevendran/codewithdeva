@@ -27,8 +27,8 @@
 
 <!-- side nav -->
 
-<div class="container-fluid sidenav-container m-0 w-75" [ngStyle]="{display: sidenav}">
-    <div class="row">
+<nav class="container-fluid sidenav-wrapper px-0 m-0 w-100"(click)="closeSideNav()" [ngStyle]="{display: sidenav}">
+    <div class="row sidenav-container w-75">
         <div class="col-12">
             <div class="float-end mt-2">
                 <i class="bi bi-x-circle-fill h1" (click)="closeSideNav()"></i>
@@ -41,4 +41,4 @@
             </div>
         </div>
     </div>
-</div>
+</nav>

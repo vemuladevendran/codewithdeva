@@ -9,6 +9,10 @@ nav {
     display: -webkit-box;
 }
 
+.sidenav-wrapper {
+    background-color: transparent;
+}
+
 .sidenav-container {
     height: 100vh;
     background-color: whitesmoke;

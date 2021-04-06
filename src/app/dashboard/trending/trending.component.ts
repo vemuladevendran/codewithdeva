@@ -11,6 +11,7 @@ export class TrendingComponent implements OnInit {
   pageData: any[] = [];
   pagecount: any = 0;
   category = '';
+  displayLoader = false;
   constructor(
     private router: Router,
     private http: HttpClient,
@@ -47,6 +48,7 @@ export class TrendingComponent implements OnInit {
 
 
   private async loadNews(): Promise<void> {
+    this.displayLoader = true;
     try {
       const opts = {
         params: {
@@ -54,13 +56,15 @@ export class TrendingComponent implements OnInit {
           category: this.category,
         }
       };
-      // fromString: "page=0&category=தமிழ் வரலாறு"}
       const result = await this.http.get<any>('https://tamilpokkishamapp.com:3000/api/v2/web/topics-by-category', opts).toPromise();
       this.pageData = result.data;
       this.data.push(...this.pageData);
     } catch (error) {
       console.error(error);
 
+    }
+    finally {
+      this.displayLoader = false;
     }
   }
 }
